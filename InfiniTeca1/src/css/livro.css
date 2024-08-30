@@ -1,0 +1,59 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Adicionado para evitar problemas de largura e altura */
+}
+
+.geral{
+    width: 100%;
+    width: auto;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.LvEImgs{
+    margin: 20px;
+    width: 50%;
+    height: auto;
+    background-color: rgb(17, 17, 71);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.livro{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.imgsL{
+    width: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+.infosL{
+    margin: 20px;
+    width: 100%;
+    height: auto;
+    background-color: rgb(32, 32, 32);
+}

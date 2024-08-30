@@ -16,8 +16,8 @@
     display: flex;
     justify-content: space-between;
     background-color: #2C3E50; 
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     width: 100%;
     align-items: center;    
 }

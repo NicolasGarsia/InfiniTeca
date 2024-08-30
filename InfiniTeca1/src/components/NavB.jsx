@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function NavB({ User }) {
+export default function NavB({ }) {
   const navigate = useNavigate();
 
   return (
@@ -9,7 +9,6 @@ export default function NavB({ User }) {
       <div id="Box">
         <div className="user">
           <img src="logo.jpeg" alt="Logo" id="logo" />
-          <p className="txt">{User} </p>
         </div>
         
         <input

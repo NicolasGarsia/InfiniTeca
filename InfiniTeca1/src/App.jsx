@@ -4,6 +4,7 @@ import './App.css'
 import Home from './pages/Home'
 import Perfil from './pages/Perfil'
 import Config from './pages/Config';
+import Livro from './pages/Livro'
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Route path='/' element={<Home/>} />
       <Route path='/Perfil' element={<Perfil/>} />
       <Route path='/Config' element={<Config/>} />
+      <Route path='/Livro' element={<Livro/>} />
 
 
       </Routes>

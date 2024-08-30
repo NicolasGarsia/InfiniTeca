@@ -1,0 +1,11 @@
+.estant{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.livroh{
+background-color: black;
+    width: 35%;
+    height: 50%;
+    margin: 20px;
+}
