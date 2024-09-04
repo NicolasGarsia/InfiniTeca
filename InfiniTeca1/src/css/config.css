@@ -18,7 +18,7 @@
 .pswrd{
     display: flex;
     width: 70%;
-    height: 30px;
+    height: 40px;
     border-radius: 10px;
     border: solid black 2px;
     background-color: white;
@@ -38,7 +38,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    padding: 11px;
+    padding: 5px;
     color: black;
     font-weight: bold;  
 
@@ -54,7 +54,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    padding: 11px;
+    padding: 5px;
     font-weight: bolder;
     color: black;
 }
