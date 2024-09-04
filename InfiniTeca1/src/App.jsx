@@ -20,7 +20,6 @@ function App() {
       <Route path='/Config' element={<Config/>} />
       <Route path='/Livro' element={<Livro/>} />
 
-
       </Routes>
     </Router>
       

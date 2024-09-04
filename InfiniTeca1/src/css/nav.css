@@ -7,7 +7,6 @@
     background-color:  #6699CC;    
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     box-shadow: 2px 1.5px  2px black;
 }
@@ -66,7 +65,30 @@ li:hover {
     border: solid black 2px;
     padding: 10px;
     margin-right: 80px;
+    color: black;
 }
+
+.book-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    background-color: white;
+  }
+  
+  .book-item {
+    text-align: center;
+  }
+  
+  .book-image {
+    max-width: 150px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  .book-description img {
+    max-width: 150px;
+    max-height: 200px;
+    object-fit: cover;
+  }
 
 @media screen and (max-width: 640px){
     #Box{
