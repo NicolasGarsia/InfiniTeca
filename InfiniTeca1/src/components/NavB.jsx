@@ -1,7 +1,11 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+// src/NavB.js
 
-export default function NavB({ }) {
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import BookSearch from './Apilivro';
+
+export default function NavB() {
+  const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
   return (
@@ -16,7 +20,11 @@ export default function NavB({ }) {
           className="search"
           id="1"
           placeholder="Pesquise aqui..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+         
         />
+       
       </div>
 
       <div className="nav-area">
@@ -26,6 +34,9 @@ export default function NavB({ }) {
           <li onClick={() => navigate("/Config")}>Config</li>
         </ul>
       </div>
+
+
+      <BookSearch query={query} />
     </div>
   );
 }
