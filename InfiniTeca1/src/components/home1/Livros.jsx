@@ -10,7 +10,6 @@ export default function Liv() {
       <>
       <Carousel/>
         <h2 id="txt"> Recomendados </h2>
-  
         <div id="estante" className="estant">
           <div className="Book" onClick={() => navigate("/Livro")}>
             <img className="livroh" src="harry.png" alt="Nome Livro" />

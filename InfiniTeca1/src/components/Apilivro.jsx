@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const BookSearch = ({ query }) => {
+  const navigate = useNavigate();
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [selectedBook, setSelectedBook] = useState(null);
 
   useEffect(() => {
@@ -15,24 +17,37 @@ const BookSearch = ({ query }) => {
 
   const handleSearch = async () => {
     setLoading(true);
-    setError('');
+    setError("");
     try {
-      const response = await axios.get('https://www.googleapis.com/books/v1/volumes', {
-        params: {
-          q: query,
-          key: 'AIzaSyBxi0tqzLWnUObpkcY8GHQodlkBYKlEeyI' 
+      const response = await axios.get(
+        "https://www.googleapis.com/books/v1/volumes",
+        {
+          params: {
+            q: query,
+            key: "AIzaSyBxi0tqzLWnUObpkcY8GHQodlkBYKlEeyI",
+            maxResults:6
+          },
         }
-      });
+      );
       setBooks(response.data.items || []);
     } catch (err) {
-      setError('Erro ao buscar livros');
+      setError("Erro ao buscar livros");
     } finally {
       setLoading(false);
+      console.log(books);
     }
   };
 
   const handleBookClick = (book) => {
+    console.log(book.volumeInfo)
     setSelectedBook(book);
+    localStorage.setItem('img', book.volumeInfo.imageLinks.thumbnail)
+    localStorage.setItem('title', book.volumeInfo.title)
+    localStorage.setItem('description', book.volumeInfo.description)
+    localStorage.setItem('author', selectedBook.volumeInfo.authors?.join(', '))
+    localStorage.setItem('publisher', selectedBook.volumeInfo.publisher)
+    localStorage.setItem('pageCount', selectedBook.volumeInfo.pageCount)
+    navigate('./Livro')
   };
 
   return (
@@ -40,19 +55,23 @@ const BookSearch = ({ query }) => {
       {error && <p>{error}</p>}
       <div>
         {books.length > 0 ? (
-          <ul>
+          <ul className="book-results">
             {books.map((book) => (
-              <li key={book.id} onClick={() => handleBookClick(book)}>
-                {book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.thumbnail ? (
+              <li key={book.id} onClick={() => handleBookClick(book)} className="book-item">
+                {book.volumeInfo.imageLinks &&
+                book.volumeInfo.imageLinks.thumbnail ? (
                   <img
                     src={book.volumeInfo.imageLinks.thumbnail}
                     alt={book.volumeInfo.title}
                     className="book-image"
                   />
                 ) : (
-                  <p>Imagem não disponível</p>
+                  <img src="./defImg.png" className="book-image"/>
                 )}
-                <p>{book.volumeInfo.title} by {book.volumeInfo.authors?.join(', ')}</p>
+                <p>
+                  {book.volumeInfo.title} by{" "}
+                  {book.volumeInfo.authors?.join(", ")}
+                </p>
               </li>
             ))}
           </ul>
@@ -60,21 +79,6 @@ const BookSearch = ({ query }) => {
           <p></p>
         )}
       </div>
-      
-      {selectedBook && (
-        <div className="book-description">
-          <h2>{selectedBook.volumeInfo.title}</h2>
-          <h3>Autores: {selectedBook.volumeInfo.authors?.join(', ')}</h3>
-          <p><strong>Descrição:</strong> {selectedBook.volumeInfo.description || 'Descrição não disponível.'}</p>
-          {selectedBook.volumeInfo.imageLinks && selectedBook.volumeInfo.imageLinks.thumbnail && (
-            <img
-              src={selectedBook.volumeInfo.imageLinks.thumbnail}
-              alt={selectedBook.volumeInfo.title}
-              className="book-image"
-            />
-          )}
-        </div>
-      )}
     </div>
   );
 };

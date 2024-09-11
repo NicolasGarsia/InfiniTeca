@@ -70,23 +70,19 @@ li:hover {
 
 .book-results {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    background-color: white;
+    align-items: center;
+    justify-content: space-evenly;
   }
   
   .book-item {
     text-align: center;
+    width: 150px;
+    font-family: Arial;
   }
   
   .book-image {
-    max-width: 150px;
-    max-height: 200px;
-    object-fit: cover;
-  }
-  .book-description img {
-    max-width: 150px;
-    max-height: 200px;
+    width: 150px;
+    height: 200px;
     object-fit: cover;
   }
 
