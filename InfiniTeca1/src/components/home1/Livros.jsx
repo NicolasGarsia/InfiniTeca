@@ -1,13 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Carousel from "./Carrossel"
 
 
-
-export default function Liv({ NomeL }) {
+export default function Liv() {
     const navigate = useNavigate();
   
     return (
       <>
+      <Carousel/>
         <h2 id="txt"> Recomendados </h2>
   
         <div id="estante" className="estant">

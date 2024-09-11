@@ -24,6 +24,7 @@ export default function NavB({ }) {
           <li onClick={() => navigate("/")}>Home</li>
           <li onClick={() => navigate("/Perfil")}>Perfil</li>
           <li onClick={() => navigate("/Config")}>Config</li>
+          <li onClick={() => navigate("/Infos")}>Sobre Nos</li>
         </ul>
       </div>
     </div>

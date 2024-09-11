@@ -21,7 +21,7 @@ export default function Books({ NomeL, InfoL, Autor, Editora, Pags }) {
         <div className="tituloL">
           <p className="txtNL">{NomeL}</p>
           <div className="s2">
-            <p>S2</p>
+            <p>S2</p> 
           </div>
         </div>
 
