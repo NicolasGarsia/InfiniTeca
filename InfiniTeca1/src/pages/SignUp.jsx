@@ -1,11 +1,23 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/signup.css";
 
-function Singup() {
+function Signup() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [senhaConfirma, setSenhaConfirma] = useState("");
+
+  const submitCadastro = () => {
+    if (senha == senhaConfirma) {
+      localStorage.setItem("email", email);
+      localStorage.setItem("senha", senha);
+      navigate('/SignIn')
+    } else alert("As senhas não correspondem");
+  };
+
+
   return (
     <>
       <div className="container">
@@ -13,29 +25,36 @@ function Singup() {
         <form>
           <input
             type="text"
-            placeholder="Digite seu Email"
-            onChange={() => setEmail(email)}
+            placeholder="Digite seu e-mail"
+            onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
           <input
             type="password"
             placeholder="Digite sua senha"
-            onChange={() => setSenha(senha)}
+            onChange={(e) => setSenha(e.target.value)}
             value={senha}
           />
           <input
             type="password"
             placeholder="Repita sua senha"
-            onChange={() => setSenhaConfirma(senhaConfirma)}
+            onChange={(e) => setSenhaConfirma(e.target.value)}
             value={senhaConfirma}
           />
-          <button type="submit">Cadastre aqui</button>
+          <button
+            type="submit"
+            onClick={() => {
+              submitCadastro();
+            }}
+          >
+            Cadastre aqui
+          </button>
         </form>
 
-        <a href="">Já tem conta, faça login.</a>
+        <p onClick={() => navigate("/SignIn")}>Já tem conta? Faça login.</p>
       </div>
     </>
   );
 }
 
-export default Singup;
+export default Signup;

@@ -38,15 +38,44 @@ const BookSearch = ({ query }) => {
     }
   };
 
-  const handleBookClick = (book) => {
-    console.log(book.volumeInfo)
-    setSelectedBook(book);
+  const handleFilter = async () => {
+    setLoading(true);
+    setError("");
+    try {
+      const response = await axios.get(
+        "https://www.googleapis.com/books/v1/volumes",
+        {
+          params: {
+            q: query,
+            filter: partial,
+            key: "AIzaSyBxi0tqzLWnUObpkcY8GHQodlkBYKlEeyI",
+            maxResults:20,
+            orderBy: revelance,
+          },
+        }
+      );
+      setBooks(response.data.items || []);
+    } catch (err) {
+      setError("Erro ao buscar livros");
+    } finally {
+      setLoading(false);
+      console.log(books);
+    }
+  }
+
+  const setLocalStorage = (book) => {
     localStorage.setItem('img', book.volumeInfo.imageLinks.thumbnail)
     localStorage.setItem('title', book.volumeInfo.title)
     localStorage.setItem('description', book.volumeInfo.description)
-    localStorage.setItem('author', selectedBook.volumeInfo.authors?.join(', '))
-    localStorage.setItem('publisher', selectedBook.volumeInfo.publisher)
-    localStorage.setItem('pageCount', selectedBook.volumeInfo.pageCount)
+    localStorage.setItem('author', book.volumeInfo.authors?.join(', '))
+    localStorage.setItem('publisher', book.volumeInfo.publisher)
+    localStorage.setItem('pageCount', book.volumeInfo.pageCount)
+  }
+
+  const handleBookClick = (book) => {
+    console.log(book.volumeInfo)
+    setSelectedBook(book);
+    setLocalStorage(book)
     navigate('./Livro')
   };
 

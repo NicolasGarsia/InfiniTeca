@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Carousel from "./Carrossel"
 
-
 export default function Liv() {
     const navigate = useNavigate();
-  
+
+    
     return (
       <>
       <Carousel/>
