@@ -9,11 +9,6 @@ export default function Books({ NomeL, InfoL, Autor, Editora, Pags }) {
 
       <div className="LvEImgs">
         <img className="livro" src="harry.png" alt="Livro" />
-        <div className="imgsL">
-          <img className="img" src="Livro.jpg" alt="img1" />
-          <img className="img" src="Livro.jpg" alt="img2" />
-          <img className="img" src="Livro.jpg" alt="img3" />
-        </div>
       </div>
 
       <div className="infosL">
