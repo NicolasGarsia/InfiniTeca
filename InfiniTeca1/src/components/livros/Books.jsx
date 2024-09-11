@@ -1,14 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Books({ NomeL, InfoL, Autor, Editora, Pags }) {
+export default function Books() {
+  const NomeL = localStorage.getItem('title')
+  const img = localStorage.getItem('img')
+  const InfoL = localStorage.getItem('description')
+  const Autor = localStorage.getItem('author')
+  const Editora = localStorage.getItem('publisher')
+  const Pags = localStorage.getItem('pageCount')
   const navigate = useNavigate();
 
   return (
     <div className="geral">
 
       <div className="LvEImgs">
-        <img className="livro" src="harry.png" alt="Livro" />
+        <img className="livro" src={img} alt="Livro" />
       </div>
 
       <div className="infosL">
