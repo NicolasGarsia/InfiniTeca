@@ -14,7 +14,7 @@
 #Box{
     display: flex;
     justify-content: space-between;
-    background-color: #2C3E50; 
+    background-color: #16212b; 
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
@@ -85,6 +85,7 @@ li:hover {
     height: 200px;
     object-fit: cover;
   }
+
 
 @media screen and (max-width: 640px){
     #Box{

@@ -14,18 +14,16 @@ export default function Books() {
     <div className="geral">
 
       <div className="LvEImgs">
-          <img className="livro" src={img} alt="Livro" />
-        <div className="imgsL">
-          <img className="img" src={img} alt="img1" />
-          <img className="img" src={img} alt="img2" />
-          <img className="img" src={img} alt="img3" />
-        </div>
+        <img className="livro" src={img} alt="Livro" />
       </div>
 
       <div className="infosL">
+
         <div className="tituloL">
           <p className="txtNL">{NomeL}</p>
-          <p>S2</p>
+          <div className="s2">
+            <p>S2</p> 
+          </div>
         </div>
 
         <div className="resumoL">
@@ -33,9 +31,35 @@ export default function Books() {
         </div>
 
         <div className="caracteristicas">
-          <li className="txtPg">{Pags}pg</li>
-          <li className="txtAt">{Autor}</li>
-          <li className="txtEdt">{Editora}</li>
+
+          <div className="itens">
+            <li className="txtAt">{Autor}</li>
+            <p>autor</p>
+          </div>
+
+          <div className="itens">
+            <li className="txtEdt">{Editora}</li>
+            <p>editora</p>
+          </div>
+
+
+
+          <div className="itens">
+            <li className="txtPg">{Pags}.pg</li>
+            <p>paginas</p>
+          </div>
+
+
+
+        </div>
+
+        <div className="botoesL">
+          <button className="botaoL">
+            <p>Onde</p>
+          </button>
+          <button className="botaoL">
+            <p>Alugar</p>
+          </button>
         </div>
 
       </div>

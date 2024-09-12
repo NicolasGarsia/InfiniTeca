@@ -1,12 +1,10 @@
-// src/NavB.js
+import { React, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import BookSearch from "./Apilivro";
 
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import BookSearch from './Apilivro';
-
-export default function NavB() {
-  const [query, setQuery] = useState('');
+export default function NavB({}) {
   const navigate = useNavigate();
+  const [query, setQuery] = useState("");
 
   return (
     <div id="Nav">
@@ -14,7 +12,7 @@ export default function NavB() {
         <div className="user">
           <img src="logo.jpeg" alt="Logo" id="logo" />
         </div>
-        
+
         <input
           type="search"
           className="search"
@@ -22,7 +20,6 @@ export default function NavB() {
           placeholder="Pesquise aqui..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-         
         />
        
       </div>
@@ -32,10 +29,9 @@ export default function NavB() {
           <li onClick={() => navigate("/")}>Home</li>
           <li onClick={() => navigate("/Perfil")}>Perfil</li>
           <li onClick={() => navigate("/Config")}>Config</li>
+          <li onClick={() => navigate("/Infos")}>Sobre Nos</li>
         </ul>
       </div>
-
-
       <BookSearch query={query} />
     </div>
   );

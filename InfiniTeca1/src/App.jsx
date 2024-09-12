@@ -5,8 +5,9 @@ import Home from './pages/Home'
 import Perfil from './pages/Perfil'
 import Config from './pages/Config';
 import Livro from './pages/Livro'
-import Signup from './pages/SignUp';
-import SignIn from './pages/SignIn';
+import Infos from './pages/Infos';
+
+
 
 function App() {
 
@@ -21,6 +22,8 @@ function App() {
       <Route path='/Perfil' element={<Perfil/>} />
       <Route path='/Config' element={<Config/>} />
       <Route path='/Livro' element={<Livro/>} />
+      <Route path='/infos' element={<Infos/>} />
+
 
       </Routes>
     </Router>

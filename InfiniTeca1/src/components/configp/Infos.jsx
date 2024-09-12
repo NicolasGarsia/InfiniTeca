@@ -1,24 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Importar useNavigate se você estiver usando react-router-dom
-import trocarFoto from "./TrocarFoto";
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 
 export default function Infos({ Email, Senha }) {
-  const [senhaOculta, setSenhaOculta] = useState("");
-  const [mostrarSenha, setMostrarSenha] = useState(false); // Estado para controlar a visibilidade da senha
+  const [senhaOculta, setSenhaOculta] = useState('');
+  const [mostrarSenha, setMostrarSenha] = useState(false); 
 
   const navigate = useNavigate();
 
-  // Função para converter a senha em asteriscos
   const ocultarSenha = (senha) => {
     return "*".repeat(senha.length);
   };
 
-  // Atualizar a senha oculta sempre que a senha mudar
   useEffect(() => {
     setSenhaOculta(ocultarSenha(Senha));
   }, [Senha]);
 
-  // Alternar a visibilidade da senha
   const alternarVisibilidade = () => {
     setMostrarSenha(!mostrarSenha);
   };
