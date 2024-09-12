@@ -1,0 +1,46 @@
+.nomelista {
+    margin-top: 35px;
+    font-size: 32px;
+}
+
+.containerLista, .containerLista1 {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.nomelista1 {
+    margin-top: 5px; 
+    color: black;
+    font-weight: normal;
+}
+
+.coracao {
+    width: 40px;
+    margin-right: 10px; 
+    margin-left: 10px;
+}
+
+.coracaoContainer {
+    display: flex; 
+    align-items: center; 
+    margin-top: 60px;
+}
+
+.corazon {
+    color: black;
+    font-weight: normal;
+
+}
+
+.recomendocoes{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.reco{
+    font-size: 32px;
+}

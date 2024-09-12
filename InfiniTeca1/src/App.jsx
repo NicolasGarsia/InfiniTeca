@@ -8,6 +8,8 @@ import Livro from './pages/Livro'
 import Signup from './pages/SignUp.jsx';
 import SignIn from './pages/SignIn';
 import Aluguel from './pages/Aluguel';
+import Infos from './pages/Infos.jsx';
+import Favoritos from './pages/Favoritos.jsx';
 
 function App() {
 
@@ -23,6 +25,9 @@ function App() {
       <Route path='/Config' element={<Config/>} />
       <Route path='/Livro' element={<Livro/>} />
       <Route path='/Aluguel' element={<Aluguel/>} />
+      <Route path='/Sobre' element={<Infos/>} />
+      <Route path='/Favoritos' element={<Favoritos/>} />
+
       </Routes>
     </Router>
       

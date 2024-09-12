@@ -1,8 +1,7 @@
 import NavB from "../components/NavB";
-import Infos from "../components/sobre/Infos";
+import Favoritos from "../components/favoritos/fav.jsx";
 import "../css/nav.css"
-import "../css/infos.css"
-
+import "../css/favoritos.css"
 
 
 export default function Home(){
@@ -13,7 +12,7 @@ export default function Home(){
         User = "@Garsa"
         />
 
-        <Infos/>
+        <Favoritos/>
 
         </>
 
