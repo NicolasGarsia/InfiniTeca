@@ -12,7 +12,7 @@ function SignIn() {
 
   useEffect(() => {
     setEmailUser(localStorage.getItem('email'))
-    setPasswordUser(localStorage.getItem('email'))
+    setPasswordUser(localStorage.getItem('senha'))
   },[])
 
   const submitLogin = () => {
@@ -20,7 +20,7 @@ function SignIn() {
       sessionStorage.setItem("isLoggedOn", 'true');
       navigate('/')
       console.log('funcionou')
-    } else window.alert("As senhas não correspondem");
+    } else window.alert("Usuário ou senha incorretos");
   };
   return (
     <>

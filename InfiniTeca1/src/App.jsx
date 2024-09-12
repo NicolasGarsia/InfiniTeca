@@ -6,7 +6,8 @@ import Perfil from './pages/Perfil'
 import Config from './pages/Config';
 import Livro from './pages/Livro'
 import Infos from './pages/Infos';
-
+import Signup from './pages/SignUp';
+import SignIn from './pages/SignIn';
 
 
 function App() {

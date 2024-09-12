@@ -14,7 +14,7 @@ function Signup() {
       localStorage.setItem("email", email);
       localStorage.setItem("senha", senha);
       navigate('/SignIn')
-    } else alert("As senhas não correspondem");
+    } else alert("Senhas não correspondem");
   };
 
 
