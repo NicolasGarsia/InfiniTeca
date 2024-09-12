@@ -7,6 +7,7 @@ import Config from './pages/Config';
 import Livro from './pages/Livro'
 import Signup from './pages/SignUp.jsx';
 import SignIn from './pages/SignIn';
+import Aluguel from './pages/Aluguel';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
       <Route path='/Perfil' element={<Perfil/>} />
       <Route path='/Config' element={<Config/>} />
       <Route path='/Livro' element={<Livro/>} />
-
+      <Route path='/Aluguel' element={<Aluguel/>} />
       </Routes>
     </Router>
       
