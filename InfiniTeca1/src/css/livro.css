@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Adicionado para evitar problemas de largura e altura */
+}
+
+.geral {
+    width: 100%;
+    width: auto;
+    background-color: #2C3E50;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.LvEImgs {
+    margin: 20px;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.livro {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.imgsL {
+    width: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+.infosL {
+    margin: 20px;
+    width: 100%;
+    height: auto;
+
+}
+
+.tituloL {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.txtNL {
+    width: 90%;
+    font-size: 45px;
+}
+
+.s2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    font-size: 40px;
+}
+
+.resumoL {
+    margin: 20px;
+    width: 92%;
+    height: 60%;
+}
+
+.caracteristicas {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    gap: 33%;
+    justify-content: center;
+    align-items: center;
+}
+
+.itens {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botoesL {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.botaoL {
+    padding: 10px;
+    width: 41%;
+    background-color: gray;
+    border-radius: 10px;
+    border: black solid 2px;
+}
+
+.botaoL :hover {
+    box-shadow: 5px 2px black solid;
+    cursor: pointer;
+}
