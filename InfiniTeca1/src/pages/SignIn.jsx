@@ -48,7 +48,7 @@ function SignIn() {
             Entrar
           </button>
         </form>
-
+        <p onClick={() => navigate('/ForgotPassword')}>Esqueci a Senha</p>
         <p onClick={() => navigate('/SignUp')}>Não tem conta? Cadastre-se</p>
       </div>
     </>

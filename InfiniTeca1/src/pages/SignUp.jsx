@@ -42,6 +42,7 @@ function Signup() {
             value={senhaConfirma}
           />
           <button
+          className="botaoLoginC"
             type="submit"
             onClick={() => {
               submitCadastro();
@@ -51,7 +52,7 @@ function Signup() {
           </button>
         </form>
 
-        <p onClick={() => navigate("/SignIn")}>Já tem conta? Faça login.</p>
+        <p className="cadastre" onClick={() => navigate("/SignIn")}>Já tem conta? Faça login.</p>
       </div>
     </>
   );

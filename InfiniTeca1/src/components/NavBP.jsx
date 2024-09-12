@@ -22,9 +22,12 @@ export default function NavBP({ User }) {
 
       <div className="nav-area">
         <ul>
-          <li onClick={() => navigate("/")}>Home</li>
+        <li onClick={() => navigate("/")}>Home</li>
           <li onClick={() => navigate("/Perfil")}>Perfil</li>
           <li onClick={() => navigate("/Config")}>Config</li>
+          <li onClick={() => navigate("/Favoritos")}>Favoritos</li>
+          <li onClick={() => navigate("/Sobre")}>Sobre Nos</li>
+
         </ul>
       </div>
     </div>
