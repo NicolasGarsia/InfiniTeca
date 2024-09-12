@@ -38,16 +38,25 @@ const BookSearch = ({ query }) => {
     }
   };
 
+  function setLocalStorage(book) {
+    localStorage.setItem('img', book.volumeInfo.imageLinks.thumbnail)
+    localStorage.setItem('title', book.volumeInfo.title )
+    localStorage.setItem('description', book.volumeInfo.description)
+    localStorage.setItem('author', book.volumeInfo.authors?.join(', '))
+    localStorage.setItem('publisher', book.volumeInfo.publisher)
+    localStorage.setItem('pageCount', book.volumeInfo.pageCount)
+  }
+
   const handleBookClick = (book) => {
     console.log(book.volumeInfo)
     setSelectedBook(book);
-    localStorage.setItem('img', book.volumeInfo.imageLinks.thumbnail)
-    localStorage.setItem('title', book.volumeInfo.title)
-    localStorage.setItem('description', book.volumeInfo.description)
-    localStorage.setItem('author', selectedBook.volumeInfo.authors?.join(', '))
-    localStorage.setItem('publisher', selectedBook.volumeInfo.publisher)
-    localStorage.setItem('pageCount', selectedBook.volumeInfo.pageCount)
-    navigate('./Livro')
+    setLocalStorage(book)
+    console.log(window.location.href)
+    if(window.location.href != 'localhost:5173/'){
+      navigate('../Livro')
+      setBooks([])
+    }
+      else(navigate('./Livro'))
   };
 
   return (
@@ -69,7 +78,7 @@ const BookSearch = ({ query }) => {
                   <img src="./defImg.png" className="book-image"/>
                 )}
                 <p>
-                  {book.volumeInfo.title} by{" "}
+                  {`${book.volumeInfo.title.substr(0, 25)}...`} by{" "} /*transforma o retorno em até 25 caracteres*/
                   {book.volumeInfo.authors?.join(", ")}
                 </p>
               </li>

@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function NavBP({ User }) {
   const navigate = useNavigate();
 
+
   return (
     <div id="Nav1">
       <div id="Box1">
         <div className="user">
-        <img src="icon.png" alt="Logo" id="logo1" />
-        <p className="txt1">{User} </p>
+          <img src={'./icon.png'} alt="Logo" id="logo1" />
+          <p className="txt1">{User} </p>
         </div>
 
         <input
