@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/signup.css";
+import "../css/signin.css";
 
 function SignIn() {
   const navigate = useNavigate()
@@ -13,7 +13,7 @@ function SignIn() {
   useEffect(() => {
     setEmailUser(localStorage.getItem('email'))
     setPasswordUser(localStorage.getItem('email'))
-  },[])
+  }, [])
 
   const submitLogin = () => {
     if (email == emailUser && senha == passwordUser) {
@@ -23,8 +23,11 @@ function SignIn() {
     } else window.alert("As senhas não correspondem");
   };
   return (
-    <>
-      <div className="container">
+    <><div className="signBox">
+      <div className="signLogoBox">
+      <img className="signLogo" src="logo.jpeg" alt="Logo" id="logo" />
+      </ div>
+      <div className="caixa">
         <h1>Log-in</h1>
         <form>
           <input
@@ -39,18 +42,20 @@ function SignIn() {
             onChange={(e) => setSenha(e.target.value)}
             value={senha}
           />
-          <button
-            type="submit"
-            onClick={() => 
-              submitLogin()
-            }
-          >
-            Entrar
-          </button>
         </form>
-        <p onClick={() => navigate('/ForgotPassword')}>Esqueci a Senha</p>
-        <p onClick={() => navigate('/SignUp')}>Não tem conta? Cadastre-se</p>
+        <p className="signinEsquecer" onClick={() => navigate('/ForgotPassword')}>Esqueci a Senha</p>
+        <button
+          className="signinEntrar"
+          type="submit"
+          onClick={() =>
+            submitLogin()
+          }
+        >
+          Entrar
+        </button>
+        <p className="signinCadastro" onClick={() => navigate('/SignUp')}>Não tem conta? Cadastre-se</p>
       </div>
+    </div>
     </>
   );
 }

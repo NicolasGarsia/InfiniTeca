@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import slide1 from '../../assets/slide1.png';
-import slide2 from '../../assets/slide2.png';
-import slide3 from '../../assets/slide3.png';
+import slide1 from '../../assets/slide1.jpg';
+import slide2 from '../../assets/slide2.jpg';
+import slide3 from '../../assets/slide3.jpg';
 
 
 function Carousel() {
@@ -24,7 +24,7 @@ function Carousel() {
       style={{
         position: 'relative',
         width: '100%',
-        height: 'auto', 
+        height: '60vh', 
         margin: '0 auto',
         maxWidth: '100vw',
         overflow: 'hidden'
@@ -35,7 +35,7 @@ function Carousel() {
         style={{
           position: 'relative',
           width: '100%',
-          height: '45vh',
+          height: '100%',
           overflow: 'hidden'
         }}
       >

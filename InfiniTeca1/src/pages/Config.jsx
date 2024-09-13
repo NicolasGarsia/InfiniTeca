@@ -6,9 +6,9 @@ import "../css/navc.css";
 export default function Config() {
   return (
     <>
-      <NavBC User={"@Nicolas"} Email={"Nicolas@gmail.com"} />
+      <NavBC User={"@Garsa"} Email={"otario@gmail.com"} />
 
-      <Infos Senha={"Nicolas2276-"} Email={"Nicolas@gmail.com"} />
+      <Infos Senha={"Otario2276-"} Email={"otario@gmail.com"} />
     </>
   );
 }

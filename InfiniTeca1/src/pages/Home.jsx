@@ -20,7 +20,7 @@ export default function Home() {
   }, [isLoggedOn]);
   return (
     <>
-      <NavB User="@Nicolas" />
+      <NavB User="@Garsa" />
       <Liv />
     </>
   );

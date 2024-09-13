@@ -20,10 +20,15 @@ function Signup() {
 
   return (
     <>
-      <div className="container">
-        <h1>Faça seu cadastro!!</h1>
+      <div className="signBox">
+      <div className="signLogoBox">
+      <img className="signLogo" src="logo.jpeg" alt="Logo" id="logo" />
+      </ div>
+      <div className="caixa">
+        <h1>Cadastre-se</h1>
         <form>
-          <input
+          
+           <input
             type="text"
             placeholder="Digite seu e-mail"
             onChange={(e) => setEmail(e.target.value)}
@@ -35,26 +40,21 @@ function Signup() {
             onChange={(e) => setSenha(e.target.value)}
             value={senha}
           />
-          <input
-            type="password"
-            placeholder="Repita sua senha"
-            onChange={(e) => setSenhaConfirma(e.target.value)}
-            value={senhaConfirma}
-          />
-          <button
-          className="botaoLoginC"
-            type="submit"
-            onClick={() => {
-              submitCadastro();
-            }}
-          >
-            Cadastre aqui
-          </button>
         </form>
-
-        <p className="cadastre" onClick={() => navigate("/SignIn")}>Já tem conta? Faça login.</p>
+        <button
+          className="signinEntrar"
+          type="submit"
+          onClick={() =>
+            submitLogin()
+          }
+        >
+          Entrar
+        </button>
+        <p className="signinCadastro" onClick={() => navigate("/SignIn")}>Já tem conta? Faça login.</p>
       </div>
-    </>
+    </div>
+    </>   
+
   );
 }
 
