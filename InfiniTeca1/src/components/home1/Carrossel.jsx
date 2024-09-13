@@ -24,7 +24,7 @@ function Carousel() {
       style={{
         position: 'relative',
         width: '100%',
-        height: '60vh', 
+        height: 'auto', 
         margin: '0 auto',
         maxWidth: '100vw',
         overflow: 'hidden'
@@ -35,7 +35,7 @@ function Carousel() {
         style={{
           position: 'relative',
           width: '100%',
-          height: '300px',
+          height: '45vh',
           overflow: 'hidden'
         }}
       >

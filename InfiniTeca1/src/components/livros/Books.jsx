@@ -46,10 +46,10 @@ export default function Books() {
         </div>
 
         <div className="botoesL">
-          <button className="botaoL">
+          <button className="botaoL" >
             <p className="txtb">Onde</p>
           </button>
-          <button className="botaoL">
+          <button className="botaoL" onClick={() => navigate("/Aluguel")}>
             <p className="txtb">Alugar</p>
           </button>
         </div>
