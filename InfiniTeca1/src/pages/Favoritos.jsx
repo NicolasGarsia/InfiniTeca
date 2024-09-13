@@ -9,7 +9,7 @@ export default function Home(){
 
         <>
         <NavB 
-        User = "@Garsa"
+        User = "@Nicolas"
         />
 
         <Favoritos/>

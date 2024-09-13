@@ -10,6 +10,7 @@ import SignIn from './pages/SignIn';
 import Aluguel from './pages/Aluguel';
 import Infos from './pages/Infos.jsx';
 import Favoritos from './pages/Favoritos.jsx';
+import ForgotPassword from './pages/ForgotPassword.jsx';
 
 function App() {
 

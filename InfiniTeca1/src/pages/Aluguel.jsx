@@ -7,7 +7,7 @@ import { React, useState, useEffect } from "react";
 export default function Home() {
   return (
     <>
-      <NavBC User="@Garsa" />
+      <NavBC User="@Nicolas" />
       <Aluguel/>
     </>
   );

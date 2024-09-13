@@ -7,7 +7,7 @@ export default function Livro() {
   return (
     <>
         <NavB 
-        User = "@Garsa"
+        User = "@Nicolas"
         />
         <Books 
         

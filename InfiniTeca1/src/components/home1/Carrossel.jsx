@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import slide1 from '../../assets/slide1.jpg';
-import slide2 from '../../assets/slide2.jpg';
-import slide3 from '../../assets/slide3.jpg';
+import slide1 from '../../assets/slide1.png';
+import slide2 from '../../assets/slide2.png';
+import slide3 from '../../assets/slide3.png';
 
 
 function Carousel() {
@@ -35,7 +35,7 @@ function Carousel() {
         style={{
           position: 'relative',
           width: '100%',
-          height: '100%',
+          height: '300px',
           overflow: 'hidden'
         }}
       >

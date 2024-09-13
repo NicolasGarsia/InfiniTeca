@@ -6,7 +6,7 @@ import "../css/perfil.css"
 export default function Perfil() {
   return (
     <>
-      <NavBP User="@Garsa" />
+      <NavBP User="@Nicolas" />
       <Books NomeL="PRETO E BRANCO"/>
     </>
   );
