@@ -109,6 +109,30 @@ export default function Favoritos() {
       <hr />
       <div className="recomendocoes">
         <h1 className="reco">Você Também Pode Gostar</h1>
+        </div>  
+        <div id="estante" className="favestant">
+    <div className="favBook1" onClick={() => navigate("/Livro")}>
+      <img className="favlivroh" src="quarta capa.png" alt="Nome Livro" />
+      <p>Quarta Capa</p>
+      <p>Disponiveis (02/05)</p>
+    </div>
+    <div className="favBook1" onClick={() => navigate("/Livro")}>
+      <img className="favlivroh" src="solo.png" alt="Nome Livro" />
+      <p>Solo</p>
+      <p>Disponiveis (02/05)</p>
+    </div>
+    <div className="favBook1" onClick={() => navigate("/Livro")}>
+      <img className="favlivroh" src="mestre.png" alt="Nome Livro" />
+      <p>Mestre do tempo</p>
+      <p>Disponiveis (02/05)</p>
+    </div>
+    <div className="favBook1" onClick={() => navigate("/Livro")}>
+      <img className="favlivroh" src="roxo.png" alt="Nome Livro" />
+      <p>A garota de roxo</p>
+      <p>Disponiveis (02/05)</p>
+    </div>
+    
+    
       </div>
     </>
   );

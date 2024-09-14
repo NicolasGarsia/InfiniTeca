@@ -10,8 +10,7 @@ export default function NavBP({ User }) {
     <div id="Nav1">
       <div id="Box1">
         <div className="user">
-        <img src="icon.png" alt="Logo" id="logo1" />
-        <p className="txt1">{User} </p>
+        <img src="logo.jpeg" alt="Logo" id="logo" />
         </div>
 
         <input

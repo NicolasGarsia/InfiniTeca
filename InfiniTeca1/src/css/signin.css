@@ -80,7 +80,7 @@ a:hover {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
+    
 }
 
 .signinEntrar {
@@ -125,7 +125,7 @@ p {
 .signLogoBox{
     padding-right: 50px;
     padding-top: 115px;
-    padding-bottom: 120px;
+    padding-bottom: 138px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     background-color: white;

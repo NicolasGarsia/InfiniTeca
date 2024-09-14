@@ -7,11 +7,7 @@ export default function NavBC({ User, Email }) {
   return (
     <div id="Nav2">
       <div id="Box2">
-        <img src="icon.png" alt="Logo" id="logo2" />
-        <div className="user2">
-        <p className="txt2">{User} </p>
-        <p className="txt2">{Email} </p>
-        </div>
+      <img src="logo.jpeg" alt="Logo" id="logo" />  
       </div>
 
       <div className="nav-area2">
