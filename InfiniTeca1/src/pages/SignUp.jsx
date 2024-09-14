@@ -7,14 +7,11 @@ function Signup() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [senhaConfirma, setSenhaConfirma] = useState("");
 
   const submitCadastro = () => {
-    if (senha == senhaConfirma) {
       localStorage.setItem("email", email);
       localStorage.setItem("senha", senha);
       navigate('/SignIn')
-    } else alert("As senhas não correspondem");
   };
 
 
@@ -45,7 +42,7 @@ function Signup() {
           className="signinEntrar"
           type="submit"
           onClick={() =>
-            submitLogin()
+            submitCadastro()
           }
         >
           Entrar

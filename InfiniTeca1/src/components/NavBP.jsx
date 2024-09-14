@@ -1,8 +1,10 @@
-import React from "react";
+import {React, useState} from "react";
 import { useNavigate } from "react-router-dom";
+import BookSearch from "./Apilivro";
 
 export default function NavBP({ User }) {
   const navigate = useNavigate();
+  const [query, setQuery] = useState("");
 
   return (
     <div id="Nav1">
@@ -14,9 +16,11 @@ export default function NavBP({ User }) {
 
         <input
           type="search"
-          className="search1"
+          className="search"
           id="1"
           placeholder="Pesquise aqui..."
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
         />
       </div>
 
@@ -30,6 +34,8 @@ export default function NavBP({ User }) {
 
         </ul>
       </div>
+      <BookSearch query={query} />
     </div>
+    
   );
 }

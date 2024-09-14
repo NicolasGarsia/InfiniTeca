@@ -3,8 +3,10 @@ import "../css/nav.css";
 import "../css/home.css";
 import Liv from "../components/home1/Livros";
 import { React, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate()
   const [isLoggedOn, setIsLoggedOn] = useState("default");
 
   useEffect(() => {
@@ -15,9 +17,13 @@ export default function Home() {
     if (isLoggedOn == "true") {
       return console.log("logado");
     } else if (isLoggedOn == "default") {
-      console.log("await");
-    } else console.log("Não logado");
+      console.log('await')
+    } else (redirect())
   }, [isLoggedOn]);
+
+  const redirect = () => {
+    navigate('./SignIn')
+  }
   return (
     <>
       <NavB User="@Garsa" />

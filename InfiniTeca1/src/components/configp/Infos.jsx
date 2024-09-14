@@ -36,7 +36,7 @@ export default function Infos({ Email, Senha }) {
         <button className="bt2" onClick={alternarVisibilidade}>
           {mostrarSenha ? 'Ocultar' : 'Mostrar'}
         </button>
-        <button className="bt1" onClick={() => navigate('/SenhaNova')}> Alterar </button>
+        <button className="bt1" onClick={() => navigate('../ForgotPassword')}> Alterar </button>
       </div>
     </div>
   );

@@ -33,8 +33,7 @@ const BookSearch = ({ query }) => {
     } catch (err) {
       setError("Erro ao buscar livros");
     } finally {
-      setLoading(false);
-      console.log(books);
+      setLoading(false);;
     }
   };
 
@@ -51,7 +50,14 @@ const BookSearch = ({ query }) => {
     console.log(book.volumeInfo)
     setSelectedBook(book);
     setLocalStorage(book)
-    navigate('./Livro')
+    if(window.location.href != 'http://localhost:5173'){
+      navigate('../Livro')
+      setBooks([])
+    }
+    else{
+      navigate('./Livro')
+    }
+
   };
 
   return (
@@ -73,8 +79,8 @@ const BookSearch = ({ query }) => {
                   <img src="./defImg.png" className="book-image"/>
                 )}
                 <p>
-                  {book.volumeInfo.title} by{" "}
-                  {book.volumeInfo.authors?.join(", ")}
+                  {`${book.volumeInfo.title.substring(0,25)}...`} by{" "}
+                  {`${book.volumeInfo.authors?.join(", ").substring(0,15)}...`}
                 </p>
               </li>
             ))}

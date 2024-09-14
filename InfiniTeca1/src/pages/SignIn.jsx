@@ -12,11 +12,11 @@ function SignIn() {
 
   useEffect(() => {
     setEmailUser(localStorage.getItem('email'))
-    setPasswordUser(localStorage.getItem('email'))
+    setPasswordUser(localStorage.getItem('senha'))
   }, [])
 
   const submitLogin = () => {
-    if (email == emailUser && senha == passwordUser) {
+    if (email == emailUser && senha == passwordUser) { 
       sessionStorage.setItem("isLoggedOn", 'true');
       navigate('/')
       console.log('funcionou')
