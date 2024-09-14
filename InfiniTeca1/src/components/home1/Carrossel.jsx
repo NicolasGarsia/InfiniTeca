@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import slide1 from '../../assets/slide1.jpg';
-import slide2 from '../../assets/slide2.jpg';
-import slide3 from '../../assets/slide3.jpg';
+import slide1 from '../../assets/slide1.png';
+import slide2 from '../../assets/slide2.png';
+import slide3 from '../../assets/slide3.png';
+
+
 
 
 function Carousel() {
   const images = [slide1, slide2, slide3];
   const [currentIndex, setCurrentIndex] = useState(0);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,8 +18,10 @@ function Carousel() {
       );
     }, 6000);
 
+
     return () => clearInterval(interval);
   }, [images.length]);
+
 
   return (
     <div
@@ -24,7 +29,7 @@ function Carousel() {
       style={{
         position: 'relative',
         width: '100%',
-        height: '60vh', 
+        height: '40vh',
         margin: '0 auto',
         maxWidth: '100vw',
         overflow: 'hidden'
@@ -33,10 +38,8 @@ function Carousel() {
       <div
         className="carousel-inner"
         style={{
-          position: 'relative',
           width: '100%',
-          height: '100%',
-          overflow: 'hidden'
+          height: '300',
         }}
       >
         {images.map((image, index) => (
@@ -47,7 +50,7 @@ function Carousel() {
               display: index === currentIndex ? 'block' : 'none',
               transition: 'opacity 1s ease-in-out',
               width: '100%',
-              height: '100%',
+              height: '300',
               position: 'absolute'
             }}
           >
@@ -56,8 +59,8 @@ function Carousel() {
               alt={`Slide ${index + 1}`}
               style={{
                 width: '100%',
-                height: '100%',
-                objectFit: 'cover' 
+                height: 300,
+                objectFit: 'cover'
               }}
             />
           </div>
@@ -78,5 +81,6 @@ function Carousel() {
     </div>
   );
 }
+
 
 export default Carousel;
