@@ -79,7 +79,7 @@ const BookSearch = ({ query }) => {
                   <img src="./defImg.png" className="book-image"/>
                 )}
                 <p>
-                  {`${book.volumeInfo.title.substring(0,25)}...`} by{" "}
+                  {book.volumeInfo.title ? `${book.volumeInfo.title.substring(0,25)}...` : "Sem título"} by{" "}
                   {`${book.volumeInfo.authors?.join(", ").substring(0,15)}...`}
                 </p>
               </li>
